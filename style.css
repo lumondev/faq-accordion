@@ -1,0 +1,189 @@
+:root {
+  --xDarkDesBlue: hsl(238, 29%, 16%);
+  --softRed: hsl(14, 88%, 65%);
+  --softViolet: hsl(273, 75%, 66%);
+  --softBlue: hsl(240, 73%, 65%);
+  --xDarkGrayBlue: hsl(237, 12%, 33%);
+  --darkGrayBlue: hsl(240, 6%, 50%);
+  --lightGrayBlue: hsl(240, 5%, 91%);
+  --fontSize: 12px;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--softViolet)), to(var(--softBlue)));
+  background-image: linear-gradient(var(--softViolet), var(--softBlue));
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.card {
+  width: 930px;
+  height: 450px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.card__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: right -15% top 60%;
+  background-size: auto;
+}
+
+.card__image img {
+  width: 100%;
+  height: auto;
+}
+
+.card__image-inner {
+  overflow: hidden;
+}
+
+.card__image-inner img {
+  -webkit-transform: translateX(-16%);
+          transform: translateX(-16%);
+}
+
+.card__image-outer {
+  position: absolute;
+  -webkit-transform: translateX(-49%) translateY(20%);
+          transform: translateX(-49%) translateY(20%);
+}
+
+.card__text {
+  padding: 20px 40px;
+  padding-bottom: 20px;
+}
+
+.card__text h1 {
+  color: var(--xDarkDesBlue);
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+
+.card__text div {
+  border-bottom: 1px solid var(--lightGrayBlue);
+}
+
+.card__text div span {
+  float: right;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.card__text .content {
+  padding: 0;
+  color: var(--darkGrayBlue);
+  font-size: 12px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.card__text label {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 15px 15px 15px 0;
+  color: var(--xDarkDesBlue);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.card__text label:hover {
+  color: var(--softRed);
+}
+
+.card__text input {
+  display: none;
+}
+
+.card__text input:checked ~ .content {
+  height: 50px;
+  opacity: 1;
+}
+
+.card__text input:checked ~ label span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.card__text input:checked ~ label {
+  font-weight: bolder;
+}
+
+@media (max-width: 990px) {
+  .card {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    width: 300px;
+    height: 600px;
+    margin: auto;
+    margin-top: 100px;
+  }
+  .card__image {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: right 55% bottom 0%;
+    background-size: 80%;
+    height: 250px;
+    margin-top: -135px;
+  }
+  .card__image-inner {
+    overflow: visible;
+  }
+  .card__image-outer {
+    display: none;
+  }
+  .card__text {
+    margin: 0;
+    height: 80%;
+    font-size: 0.8rem;
+    padding: 20px;
+  }
+  .card__text h1 {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
