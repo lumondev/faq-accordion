@@ -151,7 +151,7 @@ body {
 
 @media (max-width: 990px) {
   body {
-    height: 120vh;
+    height: 140vh;
     overflow: auto;
   }
   .card {
