@@ -27,6 +27,7 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--softViolet)), to(var(--softBlue)));
   background-image: linear-gradient(var(--softViolet), var(--softBlue));
+  background-attachment: fixed;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
