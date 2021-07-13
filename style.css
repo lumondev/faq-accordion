@@ -9,6 +9,7 @@
 }
 
 html {
+  height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -21,10 +22,12 @@ html {
 }
 
 body {
+  padding: 0;
+  margin: 0;
   font-family: "Kumbh Sans", sans-serif;
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--softViolet)), to(var(--softBlue)));
   background-image: linear-gradient(var(--softViolet), var(--softBlue));
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,7 +154,6 @@ body {
 
 @media (max-width: 990px) {
   body {
-    height: 140vh;
     overflow: auto;
   }
   .card {
