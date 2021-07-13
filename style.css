@@ -6,7 +6,6 @@
   --xDarkGrayBlue: hsl(237, 12%, 33%);
   --darkGrayBlue: hsl(240, 6%, 50%);
   --lightGrayBlue: hsl(240, 5%, 91%);
-  --fontSize: 12px;
 }
 
 html {
@@ -29,18 +28,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
 }
 
 .card {
   width: 930px;
-  height: 450px;
+  height: 500px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -59,7 +58,7 @@ body {
           align-items: center;
   background-image: url(./images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
-  background-position: right -15% top 60%;
+  background-position: right -15% top 65%;
   background-size: auto;
 }
 
@@ -84,8 +83,8 @@ body {
 }
 
 .card__text {
-  padding: 20px 40px;
-  padding-bottom: 20px;
+  padding: 40px;
+  padding-right: 80px;
 }
 
 .card__text h1 {
@@ -151,6 +150,9 @@ body {
 }
 
 @media (max-width: 990px) {
+  body {
+    overflow: auto;
+  }
   .card {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
